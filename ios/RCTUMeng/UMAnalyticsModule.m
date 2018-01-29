@@ -5,7 +5,6 @@
 //
 //  Copyright (c) 2016年 tendcloud. All rights reserved.
 //
-
 #import <UMAnalytics/MobClick.h>
 #import <UMAnalytics/MobClickGameAnalytics.h>
 #import <UMAnalytics/DplusMobClick.h>
@@ -187,89 +186,89 @@ RCT_EXPORT_METHOD(bonusWithItem:(NSString *)item amount:(int)amount price:(doubl
 
 //Dplus
 
-RCT_EXPORT_METHOD(track:(NSString *)eventName)
-{
-  
-  if (eventName == nil && [eventName isKindOfClass:[NSNull class]]) {
-    eventName = nil;
-  }
-  [DplusMobClick track:eventName];
-}
-
-RCT_EXPORT_METHOD(trackWithMap:(NSString *)eventName property:(NSDictionary *) property)
-{
-  
-  if (eventName == nil && [eventName isKindOfClass:[NSNull class]]) {
-    eventName = nil;
-  }
-  
-  if (property == nil && [property isKindOfClass:[NSNull class]]) {
-    property = nil;
-  }
-  [DplusMobClick track:eventName property:property];
-}
-
-RCT_EXPORT_METHOD(registerSuperProperty:(NSDictionary *)property)
-{
-  
-  if (property == nil && [property isKindOfClass:[NSNull class]]) {
-    property = nil;
-  }
-  [DplusMobClick registerSuperProperty:property];
-}
-
-RCT_EXPORT_METHOD(unregisterSuperProperty:(NSString *)propertyName)
-{
-  
-  if (propertyName == nil && [propertyName isKindOfClass:[NSNull class]]) {
-    propertyName = nil;
-  }
-  [DplusMobClick unregisterSuperProperty:propertyName];
-  
-}
-
-
-
-RCT_EXPORT_METHOD(getSuperProperty:(NSString *)propertyName  callback:(RCTResponseSenderBlock)callback)
-{
-  
-  if (propertyName == nil && [propertyName isKindOfClass:[NSNull class]]) {
-    propertyName = nil;
-  }
-  callback(@[[DplusMobClick getSuperProperty:propertyName]]);
-  
-}
-
-RCT_EXPORT_METHOD(getSuperProperties:(RCTResponseSenderBlock)callback)
-{
-  NSString *jsonString = nil;
-  NSError *error = nil;
-  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[DplusMobClick getSuperProperties]
-                                                     options:kNilOptions //TODO: NSJSONWritingPrettyPrinted  // kNilOptions
-                                                       error:&error];
-  if ([jsonData length] && (error == nil))
-  {
-    jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding] ;
-  }else{
-    jsonString=@"";
-  }
-  
-  callback(@[jsonString]);
-  
-}
-
-RCT_EXPORT_METHOD(clearSuperProperties)
-{
-  [DplusMobClick clearSuperProperties];
-  
-}
-
-RCT_EXPORT_METHOD(setFirstLaunchEvent:(NSArray *)eventList)
-{
-  if (eventList == nil && [eventList isKindOfClass:[NSNull class]]) {
-    eventList = nil;
-  }
-  [DplusMobClick setFirstLaunchEvent:eventList];
-}
+//RCT_EXPORT_METHOD(track:(NSString *)eventName)
+//{
+//
+//  if (eventName == nil && [eventName isKindOfClass:[NSNull class]]) {
+//    eventName = nil;
+//  }
+//  [DplusMobClick track:eventName];
+//}
+//
+//RCT_EXPORT_METHOD(trackWithMap:(NSString *)eventName property:(NSDictionary *) property)
+//{
+//
+//  if (eventName == nil && [eventName isKindOfClass:[NSNull class]]) {
+//    eventName = nil;
+//  }
+//
+//  if (property == nil && [property isKindOfClass:[NSNull class]]) {
+//    property = nil;
+//  }
+//  [DplusMobClick track:eventName property:property];
+//}
+//
+//RCT_EXPORT_METHOD(registerSuperProperty:(NSDictionary *)property)
+//{
+//
+//  if (property == nil && [property isKindOfClass:[NSNull class]]) {
+//    property = nil;
+//  }
+//  [DplusMobClick registerSuperProperty:property];
+//}
+//
+//RCT_EXPORT_METHOD(unregisterSuperProperty:(NSString *)propertyName)
+//{
+//
+//  if (propertyName == nil && [propertyName isKindOfClass:[NSNull class]]) {
+//    propertyName = nil;
+//  }
+//  [DplusMobClick unregisterSuperProperty:propertyName];
+//
+//}
+//
+//
+//
+//RCT_EXPORT_METHOD(getSuperProperty:(NSString *)propertyName  callback:(RCTResponseSenderBlock)callback)
+//{
+//
+//  if (propertyName == nil && [propertyName isKindOfClass:[NSNull class]]) {
+//    propertyName = nil;
+//  }
+//  callback(@[[DplusMobClick getSuperProperty:propertyName]]);
+//
+//}
+//
+//RCT_EXPORT_METHOD(getSuperProperties:(RCTResponseSenderBlock)callback)
+//{
+//  NSString *jsonString = nil;
+//  NSError *error = nil;
+//  NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[DplusMobClick getSuperProperties]
+//                                                     options:kNilOptions //TODO: NSJSONWritingPrettyPrinted  // kNilOptions
+//                                                       error:&error];
+//  if ([jsonData length] && (error == nil))
+//  {
+//    jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding] ;
+//  }else{
+//    jsonString=@"";
+//  }
+//
+//  callback(@[jsonString]);
+//
+//}
+//
+//RCT_EXPORT_METHOD(clearSuperProperties)
+//{
+//  [DplusMobClick clearSuperProperties];
+//
+//}
+//
+//RCT_EXPORT_METHOD(setFirstLaunchEvent:(NSArray *)eventList)
+//{
+//  if (eventList == nil && [eventList isKindOfClass:[NSNull class]]) {
+//    eventList = nil;
+//  }
+//  [DplusMobClick setFirstLaunchEvent:eventList];
+//}
 
 @end
