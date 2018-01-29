@@ -41,18 +41,8 @@ MobclickAgent.setScenarioType(this, EScenarioType.E_DUM_NORMAL);
 ```
 
 ## iOS
-1. 通过Pod安装依赖
-进入到`PROJECT_ROOT/ios`，
-在`Podfile`文件中添加一下内容（如果没有，通过`pod init`新建一个）
-```sh
-# Pods for umeng 若安装不了 UMCCommon和UMCSecurityPlugins，则 pod repo update
-pod 'UMCCommon'
-pod 'UMCSecurityPlugins'
-pod 'UMengAnalytics-NO-IDFA'  # 友盟统计
-```
-若安装失败，出现无法找到UMCCommon，在可以先运行`pod repo update`
 
-2. 在`Appdelegate.m`中添加初始化代码
+1. 在`Appdelegate.m`中添加初始化代码
 ```
 #import "RNUMConfigure.h"
 
@@ -63,3 +53,8 @@ pod 'UMengAnalytics-NO-IDFA'  # 友盟统计
   ...
 }
 ```
+
+2. 添加Framework的路径
+`Build Settings` 的`Framework Search Paths`中添加`$(SRCROOT)/../node_modules/react-native-umeng/ios/RCTUMeng/Frameworks`
+在`Build Settings ->Link -> Other Linker Flags`中加入友盟导入的包 
+`-framework "UMAnalytics"、-framework "UMCommon"、-framework "UTDID"`
