@@ -36,6 +36,7 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
     public String getName() {
         return "UMAnalyticsModule";
     }
+
     @ReactMethod
     private void initGame() {
         UMGameAgent.init(context);
@@ -62,7 +63,7 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
         MobclickAgent.onEvent(context, eventId);
     }
     @ReactMethod
-    public void onEventWithLable(String eventId,String eventLabel) {
+    public void onEventWithLabel(String eventId,String eventLabel) {
         MobclickAgent.onEvent(context, eventId, eventLabel);
     }
     @ReactMethod
@@ -185,6 +186,11 @@ public class AnalyticsModule extends ReactContextBaseJavaModule {
             }
         }
         UMADplus.setFirstLaunchEvent(context, list);
+    }
+
+    @ReactMethod
+    public void reportError(String errorString) {
+        MobclickAgent.reportError(context, errorString);
     }
 //    /********************************U-Dplus*********************************/
 //    @ReactMethod
