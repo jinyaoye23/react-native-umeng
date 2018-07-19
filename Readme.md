@@ -54,7 +54,12 @@ MobclickAgent.setScenarioType(this, EScenarioType.E_DUM_NORMAL);
 }
 ```
 
-2. 添加Framework的路径
-`Build Settings` 的`Framework Search Paths`中添加`$(SRCROOT)/../node_modules/react-native-umeng/ios/RCTUMeng/Frameworks`
-在`Build Settings ->Link -> Other Linker Flags`中加入友盟导入的包 
-`-framework "UMAnalytics"、-framework "UMCommon"、-framework "UTDID"`
+2. 添加Framework方法
+在`Pod -> Podfile`中加入 
+```
+ 'UMCAnalytics'      #友盟SDK
+ 'UMCCommon'         #友盟SDK
+ 'UTDID'            #友盟SDK
+```
+打开终端在项目的`iOS`目录下执行`pod setup`命令，成功后执行`pod install`，友盟库导入成功！
+
