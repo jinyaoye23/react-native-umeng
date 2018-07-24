@@ -55,11 +55,12 @@ MobclickAgent.setScenarioType(this, EScenarioType.E_DUM_NORMAL);
 ```
 
 2. 添加Framework方法
-在`Pod -> Podfile`中加入 
-```
- 'UMCAnalytics'      #友盟SDK
- 'UMCCommon'         #友盟SDK
- 'UTDID'            #友盟SDK
-```
+    在`Pod -> Podfile`中加入 
+
+    ```
+    pod 'UMCCommon'
+    pod 'UMCSecurityPlugins'
+    pod 'UMCAnalytics'
+    ```
 打开终端在项目的`iOS`目录下执行`pod setup`命令，成功后执行`pod install`，友盟库导入成功！
 

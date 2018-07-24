@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9620C56A200E230700529EB5 /* UMAnalyticsModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9620C566200E230700529EB5 /* UMAnalyticsModule.m */; };
 		9620C56B200E230700529EB5 /* RNUMConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 9620C567200E230700529EB5 /* RNUMConfigure.m */; };
-		96C31F032010AAA9002F522A /* SecurityEnvSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C31EFF2010AAA9002F522A /* SecurityEnvSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +29,6 @@
 		9620C567200E230700529EB5 /* RNUMConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNUMConfigure.m; sourceTree = "<group>"; };
 		9620C568200E230700529EB5 /* UMAnalyticsModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMAnalyticsModule.h; sourceTree = "<group>"; };
 		9620C569200E230700529EB5 /* RNUMConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNUMConfigure.h; sourceTree = "<group>"; };
-		96C31EFF2010AAA9002F522A /* SecurityEnvSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SecurityEnvSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96C31F032010AAA9002F522A /* SecurityEnvSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +73,6 @@
 		96C31EFB2010AAA9002F522A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				96C31EFF2010AAA9002F522A /* SecurityEnvSDK.framework */,
 			);
 			name = Frameworks;
 			path = RCTUMeng/Frameworks;
@@ -257,10 +253,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/RCTUMeng/Frameworks",
 					"$(SRCROOT)/../../../ios/Pods/UMCAnalytics",
 					"$(SRCROOT)/../../../ios/Pods/UMCCommon",
-					"$(SRCROOT)/../../../ios/Pods/UTDID",
+					"$(SRCROOT)/../../../ios/Pods/UMCSecurityPlugins",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/RCTUMeng/Frameworks";
@@ -277,10 +272,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/RCTUMeng/Frameworks",
 					"$(SRCROOT)/../../../ios/Pods/UMCAnalytics",
 					"$(SRCROOT)/../../../ios/Pods/UMCCommon",
-					"$(SRCROOT)/../../../ios/Pods/UTDID",
+					"$(SRCROOT)/../../../ios/Pods/UMCSecurityPlugins",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/RCTUMeng/Frameworks";
