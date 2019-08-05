@@ -34,12 +34,7 @@
 // 设置场景
 + (void)setScenarioType:(RNEScenarioType)eSType
 {
-    if (eSType == RN_E_UM_GAME) {
-        [MobClick setScenarioType: E_UM_GAME];
-    } else if (eSType == RN_E_UM_DPLUS) {
-        [MobClick setScenarioType: E_UM_DPLUS];
-    } else {
-        [MobClick setScenarioType: E_UM_NORMAL];
-    }
+    // 新版统计中，只有E_UM_NORMAL 这个场景
+    [MobClick setScenarioType: E_UM_GAME];
 }
 @end
