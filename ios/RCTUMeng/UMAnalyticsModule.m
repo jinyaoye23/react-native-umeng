@@ -6,8 +6,8 @@
 //  Copyright (c) 2016年 tendcloud. All rights reserved.
 //
 #import <UMAnalytics/MobClick.h>
-#import <UMAnalytics/MobClickGameAnalytics.h>
-#import <UMAnalytics/DplusMobClick.h>
+// #import <UMAnalytics/MobClickGameAnalytics.h>
+// #import <UMAnalytics/DplusMobClick.h>
 #import "UMAnalyticsModule.h"
 #import <React/RCTConvert.h>
 #import <React/RCTEventDispatcher.h>
@@ -102,87 +102,87 @@ RCT_EXPORT_METHOD(profileSignOff)
 }
 //游戏统计
 
-RCT_EXPORT_METHOD(setUserLevelId:(int)level)
-{
-  [MobClickGameAnalytics setUserLevelId:level];
-}
+// RCT_EXPORT_METHOD(setUserLevelId:(int)level)
+// {
+//   [MobClickGameAnalytics setUserLevelId:level];
+// }
 
-RCT_EXPORT_METHOD(startLevel:(NSString *)level)
-{
-  if (level == nil || [level isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics startLevel:level];
-}
+// RCT_EXPORT_METHOD(startLevel:(NSString *)level)
+// {
+//   if (level == nil || [level isKindOfClass:[NSNull class]]) {
+//     return;
+//   }
+//   [MobClickGameAnalytics startLevel:level];
+// }
 
-RCT_EXPORT_METHOD(finishLevel:(NSString *)level)
-{
-  if (level == nil || [level isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics finishLevel:level];
-}
+// RCT_EXPORT_METHOD(finishLevel:(NSString *)level)
+// {
+//   if (level == nil || [level isKindOfClass:[NSNull class]]) {
+//     return;
+//   }
+//   [MobClickGameAnalytics finishLevel:level];
+// }
 
-RCT_EXPORT_METHOD(failLevel:(NSString *)level)
-{
-  if (level == nil || [level isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics failLevel:level];
-}
+// RCT_EXPORT_METHOD(failLevel:(NSString *)level)
+// {
+//   if (level == nil || [level isKindOfClass:[NSNull class]]) {
+//     return;
+//   }
+//   [MobClickGameAnalytics failLevel:level];
+// }
 
-RCT_EXPORT_METHOD(exchange:(double)currencyAmount currencyType:(NSString *)currencyType virtualAmount:(double)virtualAmount channel:(int)channel orderId:(NSString *)orderId)
-{
-  if (currencyType == nil && [currencyType isKindOfClass:[NSNull class]]) {
-    currencyType = nil;
-  }
-  if (orderId == nil || [orderId isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics exchange:orderId currencyAmount:currencyAmount currencyType:currencyType virtualCurrencyAmount:virtualAmount paychannel:channel];
-}
+// RCT_EXPORT_METHOD(exchange:(double)currencyAmount currencyType:(NSString *)currencyType virtualAmount:(double)virtualAmount channel:(int)channel orderId:(NSString *)orderId)
+// {
+//   if (currencyType == nil && [currencyType isKindOfClass:[NSNull class]]) {
+//     currencyType = nil;
+//   }
+//   if (orderId == nil || [orderId isKindOfClass:[NSNull class]]) {
+//     return;
+//   }
+//   [MobClickGameAnalytics exchange:orderId currencyAmount:currencyAmount currencyType:currencyType virtualCurrencyAmount:virtualAmount paychannel:channel];
+// }
 
-RCT_EXPORT_METHOD(pay:(double)cash coin:(int)coin source:(double)source)
-{
-  [MobClickGameAnalytics pay:cash source:source coin:coin];
-}
+// RCT_EXPORT_METHOD(pay:(double)cash coin:(int)coin source:(double)source)
+// {
+//   [MobClickGameAnalytics pay:cash source:source coin:coin];
+// }
 
-RCT_EXPORT_METHOD(payWithItem:(double)cash item:(NSString *)item amount:(int)amount price:(double)price source:(int)source)
-{
-  if (item == nil && [item isKindOfClass:[NSNull class]]) {
-    item = nil;
-  }
-  [MobClickGameAnalytics pay:cash source:source item:item amount:amount price:price];
-}
+// RCT_EXPORT_METHOD(payWithItem:(double)cash item:(NSString *)item amount:(int)amount price:(double)price source:(int)source)
+// {
+//   if (item == nil && [item isKindOfClass:[NSNull class]]) {
+//     item = nil;
+//   }
+//   [MobClickGameAnalytics pay:cash source:source item:item amount:amount price:price];
+// }
 
-RCT_EXPORT_METHOD(buy:(NSString *)item amount:(int)amount price:(double)price)
-{
-  if (item == nil || [item isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics buy:item amount:amount price:price];
-}
+// RCT_EXPORT_METHOD(buy:(NSString *)item amount:(int)amount price:(double)price)
+// {
+//   if (item == nil || [item isKindOfClass:[NSNull class]]) {
+//     return;
+//   }
+//   [MobClickGameAnalytics buy:item amount:amount price:price];
+// }
 
-RCT_EXPORT_METHOD(use:(NSString *)item amount:(int)amount price:(double)price)
-{
-  if (item == nil || [item isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics use:item amount:amount price:price];
-}
+// RCT_EXPORT_METHOD(use:(NSString *)item amount:(int)amount price:(double)price)
+// {
+//   if (item == nil || [item isKindOfClass:[NSNull class]]) {
+//     return;
+//   }
+//   [MobClickGameAnalytics use:item amount:amount price:price];
+// }
 
-RCT_EXPORT_METHOD(bonus:(double)coin source:(int)source)
-{
-  [MobClickGameAnalytics bonus:coin source:source];
-}
+// RCT_EXPORT_METHOD(bonus:(double)coin source:(int)source)
+// {
+//   [MobClickGameAnalytics bonus:coin source:source];
+// }
 
-RCT_EXPORT_METHOD(bonusWithItem:(NSString *)item amount:(int)amount price:(double)price source:(int)source)
-{
-  if (item == nil || [item isKindOfClass:[NSNull class]]) {
-    return;
-  }
-  [MobClickGameAnalytics bonus:item amount:amount price:price source:source];
-}
+// RCT_EXPORT_METHOD(bonusWithItem:(NSString *)item amount:(int)amount price:(double)price source:(int)source)
+// {
+//   if (item == nil || [item isKindOfClass:[NSNull class]]) {
+//     return;
+//   }
+//   [MobClickGameAnalytics bonus:item amount:amount price:price source:source];
+// }
 
 //Dplus
 
