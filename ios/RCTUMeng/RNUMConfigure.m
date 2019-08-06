@@ -34,7 +34,7 @@
 // 设置场景
 + (void)setScenarioType:(RNEScenarioType)eSType
 {
-    // 新版统计中，只有E_UM_NORMAL 这个场景
-    [MobClick setScenarioType: E_UM_GAME];
+     // 新版统计中，没有集成游戏的情况，只有 E_UM_NORMAL 这个场景
+    [MobClick setScenarioType: E_UM_NORMAL];
 }
 @end
