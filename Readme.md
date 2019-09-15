@@ -1,5 +1,5 @@
 # react-native-umeng
-`react-native-umeng`是基于友盟统计的react-native插件
+`react-native-umeng`是基于友盟统计的react-native 的统计插件
 
 #安装
 > npm install https://github.com/fenglu09/react-native-umeng.git --save
