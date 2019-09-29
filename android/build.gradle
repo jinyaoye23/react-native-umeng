@@ -32,7 +32,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.facebook.react:react-native:+'
     // 友盟统计SDK
-    compile 'com.umeng.sdk:common:latest.integration'
+//    compile 'com.umeng.sdk:common:latest.integration'
     compile 'com.umeng.sdk:analytics:latest.integration'
-    compile 'com.umeng.sdk:utdid:1.1.5.3'
+//    compile 'com.umeng.sdk:utdid:1.1.5.3'
+
+    api 'com.umeng.umsdk:common:2.1.0'
+    api 'com.umeng.umsdk:utdid:1.1.5.3'
 }
