@@ -14,6 +14,10 @@ import java.lang.reflect.Method;
  */
 
 public class RNUMConfigure {
+
+    public static final int DEVICE_TYPE_PHONE = UMConfigure.DEVICE_TYPE_PHONE;
+    public static final int DEVICE_TYPE_BOX = UMConfigure.DEVICE_TYPE_BOX;
+
     public static void init(Context context, String appkey, String channel, int type, String secret){
         initRN("react-native","1.0");
         UMConfigure.init(context, appkey, channel, type, secret);
