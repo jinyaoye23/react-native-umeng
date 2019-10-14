@@ -29,7 +29,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.facebook.react:react-native:+'
+    compileOnly 'com.facebook.react:react-native:+'
     // 友盟统计SDK
     implementation 'com.umeng.umsdk:analytics:8.0.0'
     implementation 'com.umeng.umsdk:common:2.1.0'
