@@ -7,8 +7,9 @@
 //
 
 #import <UMCommon/UMCommon.h>
-#import <UMAnalytics/MobClick.h>
+#import <UMCommon/MobClick.h>
 #import "RNUMConfigure.h"
+
 
 //typedef NS_ENUM (NSUInteger, RNUMEScenarioType)
 //{
@@ -32,9 +33,9 @@
 }
 
 // 设置场景
-+ (void)setScenarioType:(RNEScenarioType)eSType
-{
-     // 新版统计中，没有集成游戏的情况，只有 E_UM_NORMAL 这个场景
-    [MobClick setScenarioType: E_UM_NORMAL];
-}
+//+ (void)setScenarioType:(RNEScenarioType)eSType
+//{
+//     // 新版统计中，没有集成游戏的情况，只有 E_UM_NORMAL 这个场景
+//    [MobClick setScenarioType: E_UM_NORMAL];
+//}
 @end

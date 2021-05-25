@@ -253,8 +253,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../../ios/Pods/UMCAnalytics",
-					"$(SRCROOT)/../../../ios/Pods/UMCCommon",
+					"$(SRCROOT)/../../../ios/Pods/UMCommon/UMCommon_7.2.9",
 					"$(SRCROOT)/../../../ios/Pods/UMCSecurityPlugins",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -272,8 +271,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../../ios/Pods/UMCAnalytics",
-					"$(SRCROOT)/../../../ios/Pods/UMCCommon",
+					"$(SRCROOT)/../../../ios/Pods/UMCommon/UMCommon_7.2.9",
 					"$(SRCROOT)/../../../ios/Pods/UMCSecurityPlugins",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

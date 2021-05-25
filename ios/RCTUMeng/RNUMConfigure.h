@@ -19,6 +19,6 @@ typedef NS_ENUM (NSUInteger, RNEScenarioType)
 
 + (void)initWithAppkey:(NSString *)appkey channel:(NSString *)channel;
 
-+ (void)setScenarioType:(RNEScenarioType)eSType;
+//+ (void)setScenarioType:(RNEScenarioType)eSType;
 
 @end

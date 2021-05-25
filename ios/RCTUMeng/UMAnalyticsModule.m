@@ -5,7 +5,7 @@
 //
 //  Copyright (c) 2016年 tendcloud. All rights reserved.
 //
-#import <UMAnalytics/MobClick.h>
+#import <UMCommon/MobClick.h>
 // #import <UMAnalytics/MobClickGameAnalytics.h>
 // #import <UMAnalytics/DplusMobClick.h>
 #import "UMAnalyticsModule.h"
