@@ -18,6 +18,12 @@ public class RNUMConfigure {
     public static final int DEVICE_TYPE_PHONE = UMConfigure.DEVICE_TYPE_PHONE;
     public static final int DEVICE_TYPE_BOX = UMConfigure.DEVICE_TYPE_BOX;
 
+    // SDK预初始化函数
+    // preInit预初始化函数耗时极少，不会影响App首次冷启动用户体验
+    public static void preInit(Context context,String appkey,String channel){
+        UMConfigure.preInit(context, appkey, channel);
+    }
+
     public static void init(Context context, String appkey, String channel, int type, String secret){
         initRN("react-native","1.0");
         UMConfigure.init(context, appkey, channel, type, secret);

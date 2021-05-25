@@ -31,11 +31,18 @@ android {
 dependencies {
     compileOnly 'com.facebook.react:react-native:+'
     // 友盟统计SDK
-    implementation 'com.umeng.umsdk:analytics:8.0.0'
-    //modify by david at start
-    // implementation 'com.umeng.umsdk:common:2.1.0'
-    // implementation 'com.umeng.umsdk:utdid:1.1.5.3'
-    implementation 'com.umeng.umsdk:common:2.2.2'
-    implementation 'com.umeng.umsdk:utdid:1.5.2'
-    //modify by david at end 
+    // modify by stpehen at 2021-05-24 start
+    implementation  'com.umeng.umsdk:common:9.3.8'// 必选
+    implementation  'com.umeng.umsdk:asms:1.2.2'// 必选
+    implementation 'com.umeng.umsdk:apm:1.2.0'//推荐，错误分析升级为U-APM产品，关注crash数
+    implementation 'com.umeng.umsdk:utdid:1.5.2.1'
+
+//    implementation 'com.umeng.umsdk:analytics:8.0.0'
+//    //modify by david at start
+//    // implementation 'com.umeng.umsdk:common:2.1.0'
+//    // implementation 'com.umeng.umsdk:utdid:1.1.5.3'
+//    implementation 'com.umeng.umsdk:common:2.2.2'
+//    implementation 'com.umeng.umsdk:utdid:1.5.2'
+    //modify by david at end
+    // modify by stpehen at 2021-05-24 start
 }
